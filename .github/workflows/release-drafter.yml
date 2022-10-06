@@ -16,7 +16,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  one-draft-release:
+  two-draft-release:
     runs-on: ubuntu-18.04
     if: github.event.pull_request.merged == true && github.base_ref == 'main' && && github.event.label.name == 'two'
     steps:
