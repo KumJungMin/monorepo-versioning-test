@@ -1,0 +1,6 @@
+_extends: monorepo:.github/release-drafter.yml
+name-template: "one-v$RESOLVED_VERSION"
+tag-template: "one-v$RESOLVED_VERSION"
+tag-prefix: one-v
+include-paths:
+  - "packages/one"

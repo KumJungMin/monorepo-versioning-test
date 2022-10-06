@@ -1,0 +1,27 @@
+name: Release Drafter
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  one:
+    name: "[one] Draft release"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: blast-hardcheese/release-drafter@v5.16.42
+        with:
+          config-name: release-drafter-one.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  two:
+    name: "[two] Draft release"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: blast-hardcheese/release-drafter@v5.16.42
+        with:
+          config-name: release-drafter-two.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
