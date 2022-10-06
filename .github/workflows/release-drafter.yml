@@ -7,7 +7,7 @@ on:
 jobs:
   one-draft-release:
     runs-on: ubuntu-18.04
-    if: github.event.pull_request.merged == true && github.base_ref == 'main' && github.event.label.name == 'one'
+    if: github.event.pull_request.merged == true && github.base_ref == 'main' && contains(github.event.pull_request.labels.*.name, 'one')
     steps:
       - name: Release drafter
         uses: release-drafter/release-drafter@v5
@@ -18,7 +18,7 @@ jobs:
 
   two-draft-release:
     runs-on: ubuntu-18.04
-    if: github.event.pull_request.merged == true && github.base_ref == 'main' && github.event.label.name == 'two'
+    if: github.event.pull_request.merged == true && github.base_ref == 'main' && contains(github.event.pull_request.labels.*.name, 'two')
     steps:
       - name: Release drafter
         uses: release-drafter/release-drafter@v5
