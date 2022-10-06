@@ -1,6 +1,17 @@
-_extends: monorepo:.github/release-drafter.yml
 name-template: "one-v$RESOLVED_VERSION"
 tag-template: "one-v$RESOLVED_VERSION"
 tag-prefix: one-v
+include-labels:
+  - "one"
 include-paths:
   - "packages/one"
+template: |
+  ## Changes
+  $CHANGES
+sort-by: "title"
+version-resolver:
+  minor:
+    labels:
+      - "minor"
+  default: minor
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
