@@ -8,6 +8,7 @@ jobs:
   one-draft-release:
     runs-on: ubuntu-18.04
     if: github.event.pull_request.merged == true && github.base_ref == 'main' && contains(github.event.pull_request.labels.*.name, 'one')
+    # closed된 PR이 main 브랜치에 merge되었을 때, 라벨에 one이 포함된 경우에만 실행
     steps:
       - name: Release drafter
         uses: release-drafter/release-drafter@v5
@@ -19,6 +20,7 @@ jobs:
   two-draft-release:
     runs-on: ubuntu-18.04
     if: github.event.pull_request.merged == true && github.base_ref == 'main' && contains(github.event.pull_request.labels.*.name, 'two')
+    # closed된 PR이 main 브랜치에 merge되었을 때, 라벨에 two가 포함된 경우에만 실행
     steps:
       - name: Release drafter
         uses: release-drafter/release-drafter@v5

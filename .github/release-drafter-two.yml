@@ -1,9 +1,9 @@
-name-template: "two-v$RESOLVED_VERSION"
+name-template: "two-v$RESOLVED_VERSION" # template 이름 형식
 tag-template: "two-v$RESOLVED_VERSION"
-tag-prefix: two-v
-include-labels:
+tag-prefix: two-v # 릴리즈 노트 tag prefix(two패키지 릴리즈 노트이므로 two을 prefix로 함)
+include-labels: # PR의 라벨에 two가 포함된 경우에만 릴리즈 노트에 포함
   - "two"
-include-paths:
+include-paths: # PR의 변경된 파일 경로에 two가 포함된 경우에만 릴리즈 노트에 포함(공통모듈도 고려했을 때 제거할 가능성 있음)
   - "packages/two"
 template: |
   ## Changes
