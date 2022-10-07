@@ -1,2 +1,2 @@
 one: one/* # one/* 브랜치에는 one 라벨을 적용
-two: two/* # two/* 브랜치에는 one 라벨을 적용
+two: two/* # two/* 브랜치에는 two 라벨을 적용
