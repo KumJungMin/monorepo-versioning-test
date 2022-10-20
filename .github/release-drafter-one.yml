@@ -1,5 +1,5 @@
 name-template: "v$RESOLVED_VERSION-one" # template 이름 형식
-tag-template: v$RESOLVED_VERSION-one"
+tag-template: "v$RESOLVED_VERSION-one"
 tag-prefix: v-one # 릴리즈 노트 tag prefix(one패키지 릴리즈 노트이므로 one을 prefix로 함)
 include-labels: # PR의 라벨에 one이 포함된 경우에만 릴리즈 노트에 포함
   - "one"
