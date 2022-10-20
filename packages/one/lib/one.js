@@ -7,6 +7,7 @@ module.exports = one;
 // 라벨이 붙을까?4444
 // 라벨이 붙을까?55555
 // 라벨이 붙을까?666666
+// 라벨이 붙을까?7777777
 function one() {
   return "Hello from one";
 }
